@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-teal: #1C9773;
+  --color-brand-teal-hover: #15795C;
+  --color-brand-teal-light: #22B58A;
+  --color-brand-teal-glow: rgba(28, 151, 115, 0.25);
+
+  --color-brand-orange: #FF9112;
+  --color-brand-orange-hover: #E57D06;
+  --color-brand-orange-light: #FFA73E;
+  --color-brand-orange-glow: rgba(255, 145, 18, 0.25);
+
+  --color-brand-dark: #070B16;
+  --color-brand-card: #0D1424;
+  --color-brand-card-hover: #121C32;
+  --color-brand-border: rgba(255, 255, 255, 0.08);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #070B16;
+  color: #F8FAFC;
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #070B16;
+  color: #F8FAFC;
+  overflow-x: hidden;
+}
+
+/* Brand Selection Highlight */
+::selection {
+  background-color: #1C9773;
+  color: #FFFFFF;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070B16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1C2B43;
+  border-radius: 9999px;
+  border: 2px solid #070B16;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1C9773;
+}
+
+/* Brand Typography & Gradients */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #1C9773 0%, #22B58A 45%, #FF9112 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-teal {
+  background: linear-gradient(135deg, #1C9773 0%, #34D399 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #FF9112 0%, #FBBF24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow Effects */
+.glow-teal {
+  box-shadow: 0 0 25px -4px rgba(28, 151, 115, 0.4);
+}
+
+.glow-orange {
+  box-shadow: 0 0 25px -4px rgba(255, 145, 18, 0.4);
+}
+
+.glow-subtle {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Glassmorphism & Surface Cards */
+.glass-panel {
+  background: rgba(13, 20, 36, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(17, 26, 46, 0.7) 0%, rgba(9, 14, 26, 0.8) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(28, 151, 115, 0.35);
+  box-shadow: 0 16px 36px -12px rgba(28, 151, 115, 0.15);
+}
+
+/* Interactive Brand Buttons */
+.btn-brand-primary {
+  background: linear-gradient(135deg, #1C9773 0%, #15795C 100%);
+  color: #FFFFFF;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px -2px rgba(28, 151, 115, 0.35);
+}
+
+.btn-brand-primary:hover {
+  background: linear-gradient(135deg, #22B58A 0%, #1C9773 100%);
+  box-shadow: 0 8px 24px -2px rgba(28, 151, 115, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-brand-accent {
+  background: linear-gradient(135deg, #FF9112 0%, #E57D06 100%);
+  color: #FFFFFF;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px -2px rgba(255, 145, 18, 0.35);
+}
+
+.btn-brand-accent:hover {
+  background: linear-gradient(135deg, #FFA73E 0%, #FF9112 100%);
+  box-shadow: 0 8px 24px -2px rgba(255, 145, 18, 0.55);
+  transform: translateY(-1px);
+}
